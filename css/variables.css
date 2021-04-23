@@ -1,3 +1,8 @@
 :root {
-    
+    --color-bg-light: #1e1a23;
+    --color-bg-dark: #121212;
+    --color-purple-grey: #342a41;
+    --color-purple-light: #bc88fc;
+    --color-purple-hard: #3600b3;
+    --color-cyan-200: #03dac6;
 }
