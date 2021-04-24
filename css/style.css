@@ -17,16 +17,18 @@ body {
 section ul li a {
     text-decoration: none;
     list-style: none;
-    display: flex;
-    flex-direction: row;
     color: white;
-    justify-content: center;
+}
+
+section ul {
+    list-style: none;
 }
 
 header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background: var(--color-purple-grey);
 }
 
 header figure {
@@ -45,10 +47,12 @@ header a {
     color: white;
 }
 
-footer a {
-    text-decoration: none;
-    text-align: center;
-    color: white;
+nav {
+    background: var(--color-purple-light);
+}
+
+nav ul {
+    list-style: none;
 }
 
 nav ul li a {
@@ -60,17 +64,164 @@ nav ul li a {
     width: 100%;
 }
 
+table {
+    border-collapse: collapse;
+}
+
+table th {
+    background-color: var(--color-cyan-200);
+    color: black;
+}
+
+footer a {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+}
+
+footer {
+    background: var(--color-purple-light);
+}
+
 /* mobile first css */
 
 /* css para moviles */
 
 @media all and (min-width:320px) {
 
+    section ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    header figure {
+        width: 20%;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin-bottom: 2%;
+        text-align: center;
+    }
+
+    #menu-block {
+        background: var(--color-purple-light);  
+    }
+
+    #menu-block img {
+        width: 10%;
+    }
+
+    #menu-block #close {
+        display: none;
+    }
+
+    #menu-block #nav-links {
+        height: 0;
+        transition: height 1s ease;
+        overflow: hidden;
+    }
+
+    #menu-block:target #open {
+        display: none;
+    }
+
+    #menu-block:target #close {
+        display: block;
+    }
+
+    #menu-block:target #nav-links {
+        height: 20vh;
+        transition: height 1s ease;
+    }
+
+    table {
+        width: 90%;
+        font-size: 1.3em;
+    }
+
+    tr {
+        display: flex;
+        flex-direction: column;
+        border: solid white 0.1rem;
+    }
+
+    table td {
+        padding: 0.3em 0.3em 0.3em 0;
+    }
+
+    .titulos-tabla{
+        display: none;
+    }
+
+
 }
 
 /* css para tablets */
 
 @media all and (min-width:768px) {
+
+    section ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    header figure {
+        width: 10%;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    nav ul li {
+        margin-bottom: 2%;
+    }
+
+    #menu-block {
+        background: var(--color-purple-light);
+    }
+
+    #menu-block img {
+        width: 4%;
+    }
+
+    #menu-block #close {
+        display: none;
+    }
+
+    #menu-block #nav-links {
+        height: 0;
+        transition: height 1s ease;
+        overflow: hidden;
+    }
+
+    #menu-block:target #open {
+        display: none;
+    }
+
+    #menu-block:target #close {
+        display: block;
+    }
+
+    #menu-block:target #nav-links {
+        transition: height 1s ease;
+    }
 
     
 }
