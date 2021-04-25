@@ -146,23 +146,22 @@ footer {
 
     table {
         width: 90%;
+        margin: 0 auto;
         font-size: 1.3em;
     }
 
     tr {
         display: flex;
         flex-direction: column;
+        margin-bottom: 0.7rem;
         border: solid white 0.1rem;
+        box-shadow: 0em 0.1em 0.1em var(--color-bg-light);
     }
 
     table td {
         padding: 0.3em 0.3em 0.3em 0;
+        border-right: 0;
     }
-
-    .titulos-tabla{
-        display: none;
-    }
-
 
 }
 
@@ -191,6 +190,11 @@ footer {
 
     nav ul li {
         margin-bottom: 2%;
+    }
+
+    #menu-block:target #nav-links {
+        height: 15vh;
+        transition: height 1s ease;
     }
 
     #menu-block {
@@ -223,13 +227,35 @@ footer {
         transition: height 1s ease;
     }
 
+    .articles {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .articles article {
+        width: 40%;
+    }
+
+    .gallery article {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .gallery figure {
+        width: 40%;
+    }
+
     
 }
 
 /* css para desktop pequeñas */
 
 @media all and (min-width:1024px) {
-
+    
 }
 
 /* css para desktop grandes */
