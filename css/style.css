@@ -66,11 +66,22 @@ nav ul li a {
 
 table {
     border-collapse: collapse;
+    text-align: center;
 }
 
 table th {
     background-color: var(--color-cyan-200);
     color: black;
+    border: 0.05em solid white;
+}
+
+table tr td {
+    border: 0.05em solid white;
+}
+
+
+table tr td:hover {
+    background: var(--color-purple-grey);
 }
 
 footer a {
@@ -154,8 +165,6 @@ footer {
         display: flex;
         flex-direction: column;
         margin-bottom: 0.7rem;
-        border: solid white 0.1rem;
-        box-shadow: 0em 0.1em 0.1em var(--color-bg-light);
     }
 
     table td {
@@ -230,7 +239,7 @@ footer {
     .articles {
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
+        justify-content: center;
         flex-wrap: wrap;
     }
 
@@ -255,12 +264,106 @@ footer {
 /* css para desktop pequeñas */
 
 @media all and (min-width:1024px) {
+
+    header figure {
+        width: 5%;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin-left: 2%;
+    }
+
+    #menu-block:target #nav-links {
+        height: 4vh;
+        transition: height 1s ease;
+    }
+
+    #menu-block {
+        background: var(--color-purple-light);
+    }
+
+    #menu-block img {
+        width: 1.5%;
+    }
+
+    #menu-block #close {
+        display: none;
+    }
+
+    #menu-block #nav-links {
+        height: 0;
+        transition: height 1s ease;
+        overflow: hidden;
+    }
+
+    #menu-block:target #open {
+        display: none;
+    }
+
+    #menu-block:target #close {
+        display: block;
+    }
+
+    #menu-block:target #nav-links {
+        transition: height 1s ease;
+    }
+
+    tr, .titulos-tabla {
+        display: table-row;
+    }
+
+    th, td {
+        padding: 0.5em;
+        width: calc(100%/6);
+        vertical-align: top;
+    }
+
+    .articles {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .articles article {
+        width: 30%;
+    }
+
+    .gallery article {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .gallery figure {
+        width: 30%;
+    }
     
 }
 
 /* css para desktop grandes */
 
 @media all and (min-width:1440px) {
+
+    .gallery article {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .gallery figure {
+        width: 25%;
+    }
 
     
 }
